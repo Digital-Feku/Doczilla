@@ -1,0 +1,63 @@
+body {
+    background: #000000;
+    background: linear-gradient(125deg, rgba(0, 0, 0, 1) 0%, rgba(29, 8, 36, 1) 50%, rgba(64, 22, 78, 1) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-style: none;
+}
+
+header {
+    padding: 52px;
+}
+
+h1 {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    color: white;
+}
+h2 {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: #F4D3FF;
+}
+h1, h2 {
+    margin: 0
+}
+
+main {
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    display: none;
+}
+button {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    background: #EDB5FF;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0px 7px 0px 0px #CF9AE0;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+}
+button:active {
+    box-shadow: none;
+    margin-top: 7px;
+}
