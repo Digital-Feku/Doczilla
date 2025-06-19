@@ -56,8 +56,72 @@ button {
     font-style: normal;
     font-size: 40px;
     color: white;
+    transition: background 1s, box-shadow 1s;
 }
 button:active {
     box-shadow: none;
     margin-top: 7px;
+}
+.popup {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    height: 450px;
+    background: #0B0021;
+    border: 5px solid #EDB5FF;
+    border-radius: 20px;
+    position: fixed;
+    box-shadow: 30px -30px 0px 0px #1D042B;
+}
+.popup-button {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: #EDB5FF;
+    box-shadow: 0px 7px 0px 0px #CF9AE0;
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    border-style: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.popup-button:active {
+    box-shadow: none;
+    top: 7px;
+}
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.textBlock > h2 {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: white;
+}
+.textBlock > p{
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+}
+.popup > a {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 20px #CF9AE0;
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path'); 
 const multer = require('multer');
+const fs = require('fs')
 
 const app = express();
 const PORT = 3000;
@@ -17,28 +18,13 @@ const storage = multer.diskStorage({
     cb(null, 'storage');
   },
   filename: (req, file, cb) => {
-    let fileName = 'file';
-    
-    if (file.originalname && typeof file.originalname === 'string') {
-
-      fileName = file.originalname;
-      
-      const timestamp = Date.now();
-      const ext = path.extname(fileName);
-      const nameWithoutExt = path.basename(fileName, ext);
-      
-      fileName = `${nameWithoutExt}_${timestamp}${ext}`;
-    } else {
-      const randomStr = Math.random().toString(36).substring(2, 10);
-      fileName = `file_${Date.now()}_${randomStr}`;
-    }
-    cb(null, fileName);
+    cb(null, file.originalname);
   }
 });
 
-
 const upload = multer({
-  storage: storage
+  storage: storage,
+  limits: { fileSize: 2 * 1024 * 1024 * 1024 }
 })
 
 app.post('/upload', upload.single('file'), (req, res) => {
@@ -48,6 +34,22 @@ res.json({
     size: req.file.size
 })
   
+});
+
+app.get('/download/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(path.join(projectRoot, 'storage'), filename);
+
+    if (fs.existsSync(filePath)) {
+        res.download(filePath, filename, (err) => {
+            if (err) {
+                console.error('Ошибка загрузки:', err);
+                res.status(500).send('Файл не может быть скачан');
+            }
+        });
+    } else {
+        res.status(404).send('Файл не найден');
+    }
 });
 
 app.listen(PORT, () => {
