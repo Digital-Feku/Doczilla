@@ -1,0 +1,8 @@
+{
+  "name": "project-manager",
+  "scripts": {
+    "file_share": "cd file_share && npm run dev",
+    "sorting": "cd sorting && node sorting.js",
+    "weather": "cd weather && npm run dev"
+  }
+}
