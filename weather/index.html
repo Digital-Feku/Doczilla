@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Weather</title>
 </head>
 <body>
-    
+    <footer>    
+        <p class="time">17:00</p>
+        <h1 class="title">Weather</h1>
+        <h2 class="subtitle">Введите название города</h2>
+    </footer>
+    <section class="top">
+        <input type="search" name="Weather" class="weather-input">
+        <button class="forecast-button">Прогноз</button>
+    </section>
+    <main>
+    <section class="right">
+        <h2 class="main-subtitle">Прогноз на ближайшее время</h2>
+        <section class="weather">
+            <button class="left-scroll"></button>
+                <div class="weather-window">
+                </div>
+            <button class="right-scroll"></button>
+        </section>
+    </section>
+    <section class="left">
+        <p class="city-name">OREL</p>
+        <div class="city-temperature">+28°</div>
+    </section>
+    </main>
 </body>
 </html>

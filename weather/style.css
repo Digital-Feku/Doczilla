@@ -1,0 +1,117 @@
+body {
+    background: #D9FFD7;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.title {
+    font-size: 64px;
+    color: #67F4D3;
+    margin: auto;
+    text-align: center;
+}
+.subtitle {
+    font-family: "Cuprum", sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+    color: #67F4D3;
+    margin: auto;
+    text-align: center;
+}
+.time {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    position: absolute;
+    right: 21px;
+    font-size: 64px;
+    color: white;
+}
+.top {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.weather-input {
+    font-family: "Cuprum", sans-serif;
+    font-size: 32px;
+    color: #67F4D3;
+    width: 600px;
+    height: 70px;
+    border-radius: 20px;
+    background: white;
+    border: solid 7px #67F4D3;
+}
+.forecast-button {
+    margin-top: 26px;
+    width: 163px;
+    height: 60px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    background: #8CF5D3;
+    border-radius: 15px;
+}
+main {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.left {
+    width: 650px;
+    height: 615px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.city-name {
+    margin: 0;
+    font-size: 128px;
+    color: #67F4D3;
+}
+.city-temperature {
+    font-size: 128px;
+    color: white;
+}
+.right {
+    width: 1330px;
+    height: 650px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-subtitle {
+    text-align: center;
+    font-family: "Cuprum", sans-serif;
+    font-size: 32px;
+    color: #67F4D3;
+}
+.weather {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+}
+.weather-window {
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background: white;
+}
+.left-scroll {
+    background: url(./images/left.png);
+    width: 75px;
+    height: 142px;
+    border: none;
+}
+.right-scroll {
+    background: url(./images/right.png);
+    width: 75px;
+    height: 142px;
+    border: none;
+}

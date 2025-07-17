@@ -25,8 +25,10 @@ async function getWeather(city) {
     if (response) {
         try {
             const data = await response.json()
-            const temp = data.hourly.weathercode.slice(0, 24)
-            return temp
+            const weather = data.hourly.weathercode.slice(0, 24)
+            const time = data.hourly.time.slice(0, 24).map(t => t.split("T")[1].slice(0, 5))
+            const temperature = data.hourly.temperature_2m.slice(0, 24);
+            return {weather, time, temperature}
         } catch (error) {
             console.log('Ошибка', error)
         }
@@ -36,6 +38,6 @@ async function getWeather(city) {
     }
 }
 
-getWeather('Orel').then(temp => {
-    console.log(temp)
+getWeather('Orel').then(weather => {
+    console.log(weather)
 })
