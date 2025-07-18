@@ -55,9 +55,14 @@ body {
     background: #8CF5D3;
     border-radius: 15px;
 }
+.forecast-button:hover {
+    background: #47b492;
+    transition: all 1s;
+}
 main {
-    display: flex;
+    display: none;
     flex-direction: row-reverse;
+    transition: all 1s;
 }
 .left {
     width: 650px;

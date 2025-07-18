@@ -5,6 +5,7 @@ async function getCoordinates(city) {
     try {
             const data = await response.json()
             return {
+                name: data.results[0].name,
                 latitude: data.results[0].latitude,
                 longitude: data.results[0].longitude
             }
@@ -37,7 +38,38 @@ async function getWeather(city) {
         return null
     }
 }
+const city = document.getElementById('weather')
+const getCityButton = document.getElementById('button')
+const main = document.getElementById('main')
+const cityName = document.getElementById('city-name')
+const cityTemperature = document.getElementById('city-temperature')
 
-getWeather('Orel').then(weather => {
-    console.log(weather)
+getCityButton.addEventListener('click', () => {
+    const cityValue = city.value
+    const now = new Date()
+    const hour = now.getHours()
+    if (!cityValue) {
+        alert ('Введите корректный город')
+        return
+    }
+        getCoordinates(cityValue).then(name => {
+                cityName.textContent = name.name
+        })
+        getWeather(cityValue).then((coordinates) => {
+            if (coordinates) {
+                main.style.display = 'flex'
+                cityTemperature.textContent = `${coordinates.temperature[hour]}°`
+
+            } else {
+                alert ('Не удалось получить местоположение города')
+            }
+        }
+    )
 })
+
+function time() {
+    const now = new Date()
+    document.getElementById('time').textContent = now.toLocaleTimeString('ru-RU');
+}
+time();
+setInterval(time, 1000);

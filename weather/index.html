@@ -12,15 +12,15 @@
 </head>
 <body>
     <footer>    
-        <p class="time">17:00</p>
+        <p class="time" id="time">17:00</p>
         <h1 class="title">Weather</h1>
         <h2 class="subtitle">Введите название города</h2>
     </footer>
     <section class="top">
-        <input type="search" name="Weather" class="weather-input">
-        <button class="forecast-button">Прогноз</button>
+        <input type="search" name="Weather" class="weather-input" id="weather">
+        <button class="forecast-button" id="button">Прогноз</button>
     </section>
-    <main>
+    <main id="main">
     <section class="right">
         <h2 class="main-subtitle">Прогноз на ближайшее время</h2>
         <section class="weather">
@@ -31,9 +31,10 @@
         </section>
     </section>
     <section class="left">
-        <p class="city-name">OREL</p>
-        <div class="city-temperature">+28°</div>
+        <p class="city-name" id="city-name">OREL</p>
+        <div class="city-temperature" id="city-temperature">+28°</div>
     </section>
     </main>
 </body>
+        <script src="scripts.js" ></script>
 </html>
