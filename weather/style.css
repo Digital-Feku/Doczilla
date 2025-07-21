@@ -103,20 +103,16 @@ main {
     justify-content: space-around
 }
 .weather-window {
+    display: flex;
+    align-items: center;
     width: 800px;
     height: 500px;
     border-radius: 20px;
     background: white;
 }
-.left-scroll {
-    background: url(./images/left.png);
-    width: 75px;
-    height: 142px;
-    border: none;
-}
-.right-scroll {
-    background: url(./images/right.png);
-    width: 75px;
-    height: 142px;
-    border: none;
+.graph {
+    width: 700px;
+    height: 400px;
+    background: white;
+    margin: auto;
 }

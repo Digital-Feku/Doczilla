@@ -4,5 +4,9 @@
     "file_share": "cd file_share && npm run dev",
     "sorting": "cd sorting && node sorting.js",
     "weather": "cd weather && npm run dev"
+  },
+  "dependencies": {
+    "canvas": "^3.1.2",
+    "chart.js": "^4.5.0"
   }
 }
